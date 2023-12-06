@@ -1,14 +1,14 @@
 body {
-    color: black;
-    margin: 550px;
-    background-color: white;
+    color: white;
+    margin: 0px;
+    background-color: rgb(44, 44, 44);
 }
 
 header,
 footer {
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(140, 182, 221);
-    border: 20px solid rgb(140, 182, 221);
+    background-color: rgb(32, 32, 32);
+    border: 20px solid rgb(32, 32, 32);
 }
 
 h1,
@@ -21,9 +21,9 @@ h6 {
 }
 
 h2 {
+    font-size: larger;
     margin: 20px;
     margin-bottom: 5px;
-    font-size: larger;
 }
 
 section {
@@ -34,23 +34,8 @@ p {
     font-family: 'Courier New', Courier, monospace;
     margin: 20px;
     margin-top: 0px;
-    background-color: yellow;
 }
 
 .important {
     font-size: xx-large;
-}
-
-.left-column {
-    color: grey;
-    float: inline-start;
-}
-
-.middle-column {
-    float: none;
-}
-
-.right-column {
-    color: grey;
-    float: right;
 }
