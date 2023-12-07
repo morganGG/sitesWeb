@@ -17,7 +17,6 @@ header {
     border: 0.75cm solid rgb(140, 182, 221);
 
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
 }
 
 footer {
@@ -60,7 +59,7 @@ p {
 
 .important {
     font-size: xx-large;
-    font-weight: bold;
+
 }
 
 .left-column {

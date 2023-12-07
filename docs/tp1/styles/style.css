@@ -1,10 +1,55 @@
+html {
+    background-color: rgb(39, 39, 39);
+}
+
+body {
+    margin: 1cm;
+}
+
+header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgb(45, 45, 45);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
-    color: black;
+    color: white;
     font-size: xx-large;
     font-family: Helvetica;
 }
 
 p {
-    color: gray;
-    font-family: Helvetica;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+}
+
+a {
+    color: grey;
+}
+
+/* ----------------- Classes ----------------- */
+
+.bar-left {
+    position: relative;
+
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.bar-right {
+    position: relative;
+    float: inline-end;
+}
+
+.important {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.box {
+    background-color: rgb(45, 45, 45);
+    border: 0.75cm solid rgb(45, 45, 45);
+    border-radius: 20px;
 }
