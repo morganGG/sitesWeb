@@ -1,0 +1,90 @@
+body {
+    background-color: rgba(254, 254, 255, 255);
+    margin: 0px;
+
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+
+    /* Make the footer stay at the bottom of the page */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------------------------------------ */
+
+header {
+    background-color: rgba(235, 234, 234, 255);
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid rgba(194, 195, 194, 255);
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+footer {
+    /* Make the footer stay at the bottom of the page */
+    margin-top: auto;
+
+    background-color: rgba(235, 234, 234, 255);
+    padding: 5px;
+    border: 20px solid rgba(235, 234, 234, 255);
+    border-top: 1px solid rgba(194, 195, 194, 255);
+
+}
+
+/* ------------------------------------------------ */
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3,
+h4 {
+    margin-bottom: 0px;
+}
+
+p {
+    line-height: 1.3em;
+}
+
+/* --------------------- Links --------------------- */
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(53, 107, 57);
+    text-decoration: underline;
+}
+
+a:active {
+    color: green;
+    text-decoration: underline;
+}
+
+/* ------------------------------------------------ */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    border: 1px solid rgba(194, 195, 194, 255);
+    border-radius: 10px;
+    background-color: rgba(235, 234, 234, 255);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tabulation {
+    margin-left: 20px;
+}

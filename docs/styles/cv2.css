@@ -39,8 +39,22 @@ footer {
     text-align: right;
     border: 1.2cm solid whitesmoke;
     font-size: 0.9em;
+    display: flex;
 }
 
+.footer-left {
+    text-align: left;
+    width: 50%;
+}
+
+.footer-right {
+    width: 50%;
+    text-align: right;
+}
+
+img {
+    padding-right: 10px;
+}
 
 /* ------------------------------------------------- */
 
@@ -65,13 +79,17 @@ strong {
     font-weight: normal;
     background-color: rgba(200, 200, 200, 0.5);
     width: fit-content;
-    padding: 2px;
-    border: 3px solid rgba(200, 200, 200, 0.5);
+    padding: 4px;
     border-radius: 8px;
 }
 
 a {
     color: rgb(39, 39, 39);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* -------------------- Container ------------------ */
@@ -81,7 +99,7 @@ a {
     flex-direction: row;
     justify-content: left;
     flex-wrap: wrap;
-    column-gap: 3em;
+    column-gap: 2em;
 }
 
 .info-header {
@@ -127,7 +145,7 @@ a {
     margin-top: 0cm;
     background-color: rgba(200, 200, 200, 0.5);
     width: fit-content;
-    border: 3px solid rgba(200, 200, 200, 0.5);
+    padding: 3px;
 }
 
 .competence-left {
