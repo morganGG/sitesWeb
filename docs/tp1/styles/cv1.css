@@ -5,96 +5,92 @@ html {
 body {
     margin: auto;
     width: 21cm;
-    margin-top: 0cm;
-    margin-bottom: 0cm;
     background-color: white;
-
+    font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
 
 header {
-    background-color: rgb(140, 182, 221);
-    border: 0.75cm solid rgb(140, 182, 221);
-
-    font-family: Arial, Helvetica, sans-serif;
+    border: 0.5cm solid cadetblue;
+    background-color: cadetblue;
     text-align: center;
 }
 
-footer {
-    background-color: rgb(140, 182, 221);
-    border: 0.75cm solid rgb(140, 182, 221);
-
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: right;
+.nom {
+    margin: 0cm;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: sans-serif;
+footer {
+    text-align: right;
+    margin: 0cm;
+    background-color: cadetblue;
+    border: 0.5cm solid cadetblue;
+}
+
+/* ------------------------------------------------- */
+
+article {
+    margin-right: 1cm;
 }
 
 h1 {
-    margin-left: 3cm;
+    margin-left: 2cm;
 }
 
 h2 {
-    margin-left: 4cm;
-    margin-bottom: 0.1cm;
-
-    font-size: larger;
+    margin-left: 3cm;
+    margin-bottom: 0cm;
+    font-size: large;
 }
 
 p {
-    font-size: 0.42cm;
-    margin: 0cm;
-    margin-bottom: 0.5cm;
-
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.2cm;
 }
 
-/* ----------- Classes ----------- */
-
-.important {
-    font-size: xx-large;
-    font-weight: bold;
+em {
+    font-style: normal;
 }
 
-.left-column {
-    position: relative;
-    right: 17.25cm;
-    float: right;
+strong {
+    font-weight: normal;
+}
 
+a {
+    color: black;
+}
+
+/* -------------------- Container ------------------ */
+
+.info-header {
+    margin-bottom: 0px;
+}
+
+.objectif {
+    margin-left: 4.3cm;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+
+.left-column,
+.competence-left {
+    text-align: right;
     color: grey;
+    width: 20%;
 }
 
 .middle-column {
-    position: relative;
-    margin-left: 4cm;
+    text-align: left;
+    width: 50%;
 }
 
 .right-column {
-    position: relative;
-    bottom: 0.45cm;
-    width: 100%;
-    margin-right: 1cm;
-    float: right;
     text-align: right;
-
     color: grey;
+    width: 30%;
 }
 
-.content {
-    margin-left: 4cm;
-}
-
-.content-category {
-    position: relative;
-    right: 17.25cm;
-    float: right;
-
-    color: grey;
-}
+/* ------------------------------------------------- */
