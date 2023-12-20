@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>TP3</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="normalize.css" />
+	<style type="text/css">
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			width: 100%;
+			min-width: 330px;
+			color: black;
+		}
+
+		header {
+			background-color: #4CAF50;
+			/* Green */
+			display: table;
+			width: 100%;
+		}
+
+		header>h1.menuitem {
+			margin: 0;
+			color: white;
+			text-align: left;
+		}
+
+		header>.menuitem {
+			font-size: 14px;
+			font-weight: bold;
+			padding: 5px 10px;
+			display: table-cell;
+		}
+
+		header>nav.menuitem {
+			text-align: right;
+		}
+
+		header>nav>a {
+			color: white;
+			text-decoration: none;
+			padding: 5px 10px;
+			-webkit-transition-duration: 0.8s;
+			/* Safari */
+			transition-duration: 0.8s;
+		}
+
+		header>nav>a:nth-child(1):hover {
+			/* accueil */
+			background-color: black;
+		}
+
+		header>nav>a:nth-child(2):hover {
+			/* vert */
+			background-color: #4CAF50;
+		}
+
+		header>nav>a:nth-child(3):hover {
+			/* rouge */
+			background-color: #F44336;
+		}
+
+		header>nav>a:nth-child(4):hover {
+			/* bleu */
+			background-color: #008CBA;
+		}
+
+		header>nav>a:nth-child(5):hover {
+			/* gris */
+			background-color: #e7e7e7;
+			color: black;
+		}
+
+		/* ------------------------------------------------------------- */
+		/* section */
+		section {
+			text-align: center;
+			display: block;
+			vertical-align: top;
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+
+		section>h2 {
+			color: #4CAF50;
+		}
+
+		/* ------------------------------------------------------------- */
+
+		aside {
+			position: fixed;
+			top: calc(25% + 50px);
+		}
+
+		aside>div {
+			background-color: #4CAF50;
+			width: fit-content;
+			padding: 10px;
+			padding-right: 15px;
+			border-radius: 0px 25px 25px 0px;
+			color: white;
+			font-size: x-large;
+			position: absolute;
+			top: 50%;
+			z-index: 11;
+			left: 0px;
+			transition: 0.8s;
+		}
+
+		aside:hover>div {
+			left: -100px;
+			transition: 0.8s;
+		}
+
+		aside>nav {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			top: 25px;
+			left: -100px;
+			transition: 0.8s;
+		}
+
+		aside:hover>nav {
+			left: 0px;
+			transition: 0.8s;
+		}
+
+		aside>nav>a {
+			background-color: #4CAF50;
+			width: 12ex;
+			color: white;
+			padding: 5px;
+			text-align: right;
+			text-decoration: none;
+			font-weight: bold;
+			z-index: 10;
+		}
+
+		/* -----------------------------------------------*/
+		/* Images */
+		#images {
+			border: 2px solid #4CAF50;
+			margin-left: auto;
+			margin-right: auto;
+			height: 250px;
+			width: 332px;
+			position: relative;
+			top: 50px;
+		}
+
+		#images>img {
+			height: 100%;
+			position: absolute;
+			left: 0;
+		}
+
+		/* A compléter */
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 class="menuitem">TP3</h1>
+		<nav class="menuitem">
+			<a href="index.html"><img src="images/home.png" alt="Accueil" /></a><a href="exo2.html"
+				style="background-color:white; color:#4CAF50;">Exo2</a><a href="exo3.html">Exo3</a><a
+				href="exo4.html">Exo4</a><a href="exo5.html">Exo5</a>
+		</nav>
+	</header>
+	<aside>
+		<div>»</div>
+		<nav>
+			<a href="index.html"><img src="images/home.png" alt="Accueil" /></a><a href="exo2.html">Exo2</a><a
+				href="exo3.html">Exo3</a><a href="exo4.html">Exo4</a><a href="exo5.html">Exo5</a>
+		</nav>
+	</aside>
+	<section>
+		<h2>Menu off-page & Images</h2>
+		<div id="images"><img src="images/mer.jpg" alt="Mer" /><img src="images/merg.jpg" alt="Mer grise" /></div>
+	</section>
+</body>
+
+</html>
