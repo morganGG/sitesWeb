@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exo 3</title>
+    <meta charset="utf-8" />
+    <script src="tools.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        #canvas1 {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exo 1</h1>
+    <script>
+        /*setTimeout(function () { alert("Reveillez-vous"); }, 3000);*/
+    </script>
+
+    <h1>Exo 2</h1>
+    <span id="cpt">0</span>
+    <script>
+        window.addEventListener("load", function (event) {
+            var span = document.getElementById("cpt");
+            var valeur = 0;
+            var idI = setInterval(function () {
+                valeur = valeur + 2;
+                span.firstChild.textContent = valeur;
+                if (valeur == 30) {
+                    clearInterval(idI);
+                    span.firstChild.textContent = "Temps écoulé";
+                }
+            }, 2000);
+        });
+    </script>
+
+    <h1>Exo 3</h1>
+    <canvas id='canvas1' width='400' height='400'></canvas>
+
+    <script>
+        var canvas = document.getElementById('canvas1');
+        var contexte = canvas.getContext('2d');
+        var rayonRobot = 10; // rayon en pixels
+        var couleurRobot = 'blue';
+
+        function dessinRobot(centre, couleur) {
+            contexte.fillStyle = couleur;
+            contexte.beginPath();
+            contexte.arc(centre.x, centre.y, rayonRobot, 0, 2 * Math.PI);
+            contexte.fill();
+        }
+
+        function positionRobotAlea() {
+            var centre = new Object();
+            centre.x = randomInteger(10, 390);
+            centre.y = randomInteger(10, 390);
+            centre.tendance = randomInteger(1, 4);
+            return centre;
+        }
+
+        function deplacementRobotAlea(centre) {
+            var rand;
+
+            while (1) {
+                rand = randomInteger(1, 100);
+
+                if (rand > 4) {
+                    rand = centre.tendance;
+                }
+
+                if ((rand == 1) && (centre.x <= 390)) {
+                    centre.x = centre.x + 1;
+                    centre.tendance = rand;
+                    return centre;
+                } else if ((rand == 2) && (centre.x >= 10)) {
+                    centre.x = centre.x - 1;
+                    centre.tendance = rand;
+                    return centre;
+                } else if ((rand == 3) && (centre.y >= 10)) {
+                    centre.y = centre.y - 1;
+                    centre.tendance = rand;
+                    return centre;
+                } else if ((rand == 4) && (centre.y <= 390)) {
+                    centre.y = centre.y + 1;
+                    centre.tendance = rand;
+                    return centre;
+                }
+            }
+        }
+
+        // partie principale
+        window.addEventListener("load", function (event) {
+            var centre = positionRobotAlea(); // initialisation de la position
+            dessinRobot(centre, couleurRobot); // initialisation du dessin
+
+            var animID = setInterval(function anim() {
+                centre = deplacementRobotAlea(centre); // mise à jour position
+                contexte.clearRect(0, 0, canvas.width, canvas.height);
+                dessinRobot(centre, couleurRobot); // mise à jour du dessin
+            }, 10);
+
+        });
+
+    </script>
+</body>
+
+</html>
